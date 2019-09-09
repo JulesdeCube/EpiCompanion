@@ -1,0 +1,134 @@
+windows {
+  --windows_background-color: #fff;
+  --windows_radius: 0.5em;
+  --windows-topBar_background-color: #ffffff/* var(--windows_background-color) */;
+
+  background-color: var(--windows_background-color);
+  width: 100vw;
+  height: 100vh;
+  border-radius: var(--windows_radius);
+  }
+html{
+  background-color: #000;
+}
+windows-topBar {
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2em;
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+  grid-template-areas: "menu title button";
+  -webkit-app-region: drag;
+  background-color: var(--windows-topBar_background-color);
+  border-radius: var(--windows_radius) var(--windows_radius) 0 0;
+}
+
+windows-topBar-titleGroup,
+windows-topBar-buttonGroup,
+windows-topBar-menuBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
+}
+
+
+
+
+
+windows-topBar-titleGroup {
+  -webkit-user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  grid-area: title;
+}
+
+windows-topBar-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 0;
+}
+
+windows-topBar-logo {
+  flex: 0 0 1em;
+  height: 1em;
+  width: 1em;
+  background-image: url("../logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1em 1em;
+  padding: 0.25em;
+}
+
+
+
+
+
+
+windows-topBar-buttonGroup {
+  justify-self: end;
+  grid-area: button;
+}
+
+windows-topBar-menuBar {
+  grid-area: menu;
+  justify-self: start;
+}
+
+windows-topBar-button,
+windows-topBar-menu {
+  margin-left: 0.5em;
+}
+
+
+
+windows-topBar-button {
+  -webkit-app-region: no-drag;
+  display: block;
+  height: 0.75em;
+  width: 0.75em;
+  border-radius: 0.75em;
+}
+
+windows-topBar-button:first-child,
+windows-topBar-menu:first-child {
+  margin-left: 0;
+}
+
+windows-topBar-button.windows-close{
+  background-color: #F96656;
+}
+windows-topBar-button.windows-close:hover{
+  background-color: #d45749;
+}
+windows-topBar-button.windows-maximize{
+  background-color: #27CD40;
+}
+windows-topBar-button.windows-maximize:hover {
+  background-color: #26bd3d;
+}
+windows-topBar-button.windows-minimize {
+  background-color: #FBBB2E;
+}
+windows-topBar-button.windows-minimize:hover {
+  background-color: #dba328
+}
+
+app {
+  position: fixed;
+  top: 2em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  border-radius: 0 0 var(--windows_radius) var(--windows_radius);
+}
+app > * {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 var(--windows_radius) var(--windows_radius);
+}

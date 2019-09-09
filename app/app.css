@@ -1,0 +1,98 @@
+app {
+  display: flex;
+  height: 100vh;
+}
+menu {
+  width: 12em;
+  background-color: #273143;
+  color: #fff;
+  fill: #fff;
+  overflow: hidden;
+  transition: width 0.5s;
+}
+
+menu.close {
+  width: 3em;
+}
+
+
+menu label {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+menu.close label {
+  opacity: 0;
+}
+
+
+menu menu-button {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+menu.close menu-button {
+  opacity: 0;
+}
+
+menu-separator {
+  background-color: #0000002e;
+  height: 0.15em;
+  margin: 0.5em 1em;
+}
+
+menu-header {
+  height: 2em;
+  padding: 0.75em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+menu-button {
+  height: 2em;
+  width: 2em;
+  border-radius: 1em;
+  background-color: #00000014;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+menu-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 0 0.75em;
+  height: 2em;
+}
+
+menu-item:hover {
+  background-color: rgb(255, 255, 255, 0.15);
+}
+
+menu-item > icon {
+  margin-right: 0.5em;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+menu-item > label {
+  font-size: 1.125em;
+}
+
+menu-item > icon[name='message'] {
+  fill: #3B82DE;
+}
+
+menu-item > icon[name='calendar'] {
+  fill: #DB7F2A;
+}
+
+
+menu-item > icon[name='file'] {
+  fill: #A7A7A7;
+}
+
+content {
+  background-color: #F6F6F7;
+  flex: 1;
+}
+
