@@ -62,10 +62,16 @@ menu-item {
   justify-content: left;
   padding: 0 0.75em;
   height: 2em;
+  
 }
 
-menu-item:hover {
-  background-color: rgb(255, 255, 255, 0.15);
+/* menu-item:hover {
+  background-color: #ffffff1a;
+} */
+
+
+menu-item.activ {
+  background-color: #ffffff26;
 }
 
 menu-item > icon {
