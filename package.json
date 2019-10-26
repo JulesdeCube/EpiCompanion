@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "electron ."
+    "test": "electron . & sleep 1 && xdotool key Super+Shift+space & wmctrl -a Code"
   },
   "repository": {
     "type": "git",
