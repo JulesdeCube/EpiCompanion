@@ -19,4 +19,4 @@ function createWindow () {
   win.webContents.openDevTools();
 }
 
-electron.app.on('ready', createWindow)
+electron.app.on('ready', createWindow);
